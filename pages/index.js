@@ -3,10 +3,12 @@ import Header from "@/components/Header";
 import NewProducts from "@/components/NewProducts";
 import { mongooseConnect } from "@/lib/mongoose";
 import { Product } from "@/models/Product";
+import Alert from "@/components/Alert";
 
 export default function HomePage({ featuredProduct, newProducts }) {
   return (
     <div>
+      <Alert />
       <Header />
       <Featured product={featuredProduct} />
       <NewProducts products={newProducts} />
